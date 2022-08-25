@@ -1,1 +1,1 @@
-** WORDLE: Adivina la palabra **
+**WORDLE: Adivina la palabra**
