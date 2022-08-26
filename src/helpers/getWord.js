@@ -4,18 +4,18 @@ export const getWord = () => {
 
     const allWords = words.split('\n');
     const filteredWords = allWords.filter( el => el.length === 5 );
-    const specialWords = filteredWords.filter(el => el.includes("ñ"));
-    const normalizedWords = filteredWords.map( el => el.normalize('NFD').replace(/[\u0300-\u036f]/g,""));
+
+    const normalizedWords = filteredWords.map( el => el.normalize('NFD')
+        .replace(/([^n\u0300-\u036f]|n(?!\u0303(?![\u0300-\u036f])))[\u0300-\u036f]+/gi,"$1")
+        .normalize());
     
     allWords.length = 0;
     filteredWords.length = 0;
 
-    const dataArr = new Set([...normalizedWords,...specialWords]);
+    const dataArr = new Set(normalizedWords);
     const result = [...dataArr];
 
-    specialWords.length = 0;
     normalizedWords.length = 0;
     const randomWord = Math.floor(Math.random() * result.length);
-console.log(result.length);
     return result[randomWord].toUpperCase();
 }
