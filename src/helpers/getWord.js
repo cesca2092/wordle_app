@@ -10,12 +10,12 @@ export const getWord = () => {
     allWords.length = 0;
     filteredWords.length = 0;
 
-    const dataArr = new Set([normalizedWords,...specialWords]);
+    const dataArr = new Set([...normalizedWords,...specialWords]);
     const result = [...dataArr];
 
     specialWords.length = 0;
     normalizedWords.length = 0;
     const randomWord = Math.floor(Math.random() * result.length);
-
+console.log(result.length);
     return result[randomWord].toUpperCase();
 }
