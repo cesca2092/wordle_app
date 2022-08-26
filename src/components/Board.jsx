@@ -19,7 +19,7 @@ export const Board = () => {
                     elements={word}
                     rowPos={i}
                     styles={"flex gap-x-3 flex-row"}
-                    stylesChild={`w-board-letter h-board-letter bg-board text-lg rounded-board-letter`}
+                    stylesChild={`w-board-letter h-board-letter bg-board text-lg rounded-board-letter dark:text-white dark:bg-letter-dark`}
                 />
             ))
         }

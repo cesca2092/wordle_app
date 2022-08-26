@@ -19,7 +19,7 @@ export const Title = () => {
   }
   return (
     <div 
-      className='flex flex-row items-center w-main-title justify-between rounded-main-title bg-main-title h-main-title'
+      className='flex flex-row items-center w-main-title justify-between rounded-main-title bg-main-title h-main-title dark:bg-title-dark dark:text-white'
     >
       <Question 
         onClick={handleIntro}

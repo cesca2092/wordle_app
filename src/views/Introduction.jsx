@@ -16,7 +16,7 @@ export const Introduction = () => {
 
   return (
     <>
-        <p className="text-lg font-bold mb-4">Como jugar</p>
+        <p className="text-lg font-bold mb-4">Cómo jugar</p>
 
         <div>
             <p>Adivina la palabra oculta en cinco minutos.</p> 
@@ -35,7 +35,7 @@ export const Introduction = () => {
                         example_one.map((el,i) => (
                             <div 
                                 className={`flex justify-center items-center w-intro-letter h-intro-letter rounded border ${
-                                    el === 'G' ? 'border-transparent bg-lime-600' :'border-black bg-white'
+                                    el === 'G' ? 'border-transparent bg-lime-600' :'border-black bg-white dark:bg-modal-bg'
                                 } text-3xl font-bold`} 
                                 key={el+i}
                             >{el}</div>
@@ -51,7 +51,7 @@ export const Introduction = () => {
                         example_two.map((el,i) => (
                             <div 
                                 className={`flex justify-center items-center w-intro-letter h-intro-letter rounded border ${
-                                    el === 'C' ? 'border-transparent bg-yellow-500' :'border-black bg-white'
+                                    el === 'C' ? 'border-transparent bg-yellow-500' :'border-black bg-white dark:bg-modal-bg'
                                 } text-3xl font-bold`} 
                                 key={el+i}
                             >{el}</div>
@@ -67,7 +67,7 @@ export const Introduction = () => {
                         example_three.map((el,i) => (
                             <div 
                                 className={`flex justify-center items-center w-intro-letter h-intro-letter rounded border ${
-                                    el === 'O' ? 'border-transparent bg-gray-600' :'border-black bg-white'
+                                    el === 'O' ? 'border-transparent bg-gray-600' :'border-black bg-white dark:bg-modal-bg'
                                 } text-3xl font-bold`}
                                 key={el+i}
                             >{el}</div>

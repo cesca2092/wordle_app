@@ -15,7 +15,7 @@ export const KeyBoard = () => {
                         i === 2 ? 'mr-6' : ''
                     }`}
                     elements={keys} 
-                    stylesChild={`h-key bg-keys rounded-key text-black font-semibold`}
+                    stylesChild={`h-key bg-keys rounded-key text-black font-semibold dark:bg-key-dark dark:text-white`}
                     isBoxButton
                 />
             ))

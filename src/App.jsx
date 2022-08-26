@@ -17,7 +17,7 @@ export const App = () => {
   return (
     <>
       <div 
-          className={`flex flex-col justify-center items-center min-h-screen gap-y-7  ${
+          className={`flex flex-col justify-center items-center min-h-screen gap-y-7 dark:bg-app-bg ${
             (firstTime || openIntro || finished || openStats)  ? 'bg-modal opacity-20' :''
           }`}
       >
@@ -29,7 +29,7 @@ export const App = () => {
       {
         ( firstTime || openIntro ) && (
           <Modal
-            styles="w-modal min-w-modal min-h-intro rounded-modal"
+            styles="w-modal min-w-modal min-h-intro rounded-modal dark:text-white"
           >
             <Introduction />
           </Modal>)
@@ -37,7 +37,7 @@ export const App = () => {
       {
         ( finished || openStats ) && (
           <Modal
-            styles="w-modal min-w-modal min-h-modal rounded-modal"
+            styles="w-modal min-w-modal min-h-modal rounded-modal dark:text-white"
           >
             <Stats />
           </Modal>)
