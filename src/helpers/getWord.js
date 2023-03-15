@@ -10,6 +10,7 @@ export const getWord = () => {
         .normalize());
     
     allWords.length = 0;
+    
     filteredWords.length = 0;
 
     const dataArr = new Set(normalizedWords);
